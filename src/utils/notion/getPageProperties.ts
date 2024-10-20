@@ -22,6 +22,7 @@ async function getPageProperties(id: string, block: BlockMap, schema: Collection
             const newurl = customMapImageUrl(url, Block)
             properties[schema[key].name] = newurl
           } catch (error) {
+            console.log(error)
             properties[schema[key].name] = undefined
           }
           break

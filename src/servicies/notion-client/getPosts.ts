@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { NotionAPI } from 'notion-client'
 import { idToUuid } from 'notion-utils'
 

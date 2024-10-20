@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-duplicate-enum-values */
 import moment from 'moment'
 import 'moment/locale/es'
 

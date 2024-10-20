@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-empty-object-type */
 import { NextPage } from 'next'
 import { AppProps } from 'next/app'
 import { ExtendedRecordMap } from 'notion-types'

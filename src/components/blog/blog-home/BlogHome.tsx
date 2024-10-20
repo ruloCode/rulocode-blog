@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import MaxWidthWrapper from '@/components/maxWidthWrapper/MaxWidthWrapper'
 import React from 'react'
 import styles from './BlogHome.module.scss'

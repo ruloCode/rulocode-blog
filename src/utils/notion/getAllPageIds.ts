@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { idToUuid } from 'notion-utils'
 import { ExtendedRecordMap, ID } from 'notion-types'
 
