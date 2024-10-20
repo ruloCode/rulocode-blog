@@ -1,4 +1,5 @@
 import BlogList from "@/components/blog/blogList/BlogList";
+import ContactSection from "@/components/contact/Contact";
 import Hero from "@/components/hero/Hero";
 import MaxWidthWrapper from "@/components/maxWidthWrapper/MaxWidthWrapper";
 import PortfolioList from "@/components/portfolio/PortfolioList";
@@ -11,6 +12,7 @@ export default function Home() {
       <SkillsSection />
       <PortfolioList />
       <BlogList />
+      <ContactSection />
     </MaxWidthWrapper>
   );
 }

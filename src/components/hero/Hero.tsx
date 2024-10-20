@@ -28,7 +28,7 @@ export default function Hero() {
             <div className="flex justify-center items-center">
               <div className="w-56 h-56 rounded-t-full overflow-hidden">
                 <Image
-                  src="/assets/Rulo_Profile.webp" // Replace with the correct image path
+                  src="/assets/Rulo_Profile.jpeg" // Replace with the correct image path
                   alt="Profile Picture"
                   width={250}
                   height={250}
