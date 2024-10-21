@@ -26,9 +26,9 @@ export default function Hero() {
           </div>
           <div className="w-full md:w-[300px] relative">
             <div className="flex justify-center items-center">
-              <div className="w-56 h-56 rounded-t-full overflow-hidden">
+              <div className="w-56 h-56 ">
                 <Image
-                  src="/assets/Rulo_Profile.jpeg" // Replace with the correct image path
+                  src="/assets/Rulo_Profile.png" // Replace with the correct image path
                   alt="Profile Picture"
                   width={250}
                   height={250}
@@ -36,15 +36,7 @@ export default function Hero() {
                 />
               </div>
             </div>
-            <div className="w-20 h-20 md:w-24 md:h-24   absolute top-0 right-[7px] md:right-[-27px] ">
-              <Image
-                src="/assets/Skills_Card_Icon.svg" // Replace with the correct image path
-                alt="Profile Picture"
-                width={250}
-                height={250}
-                className="object-cover"
-              />
-            </div>
+         
           </div>
         </div>
       </div>
