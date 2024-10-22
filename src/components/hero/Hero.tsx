@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import Profile from '../../../public/assets/Rulo_profile.png'
 
 export default function Hero() {
   return (
@@ -19,7 +20,7 @@ export default function Hero() {
             </p>
             <Link
               href="#contact"
-              className="w-full flex justify-center items-center inline-block bg-gray-900 text-white px-6 py-3 rounded-md font-semibold hover:bg-gray-800 transition-colors"
+              className="w-full md:w-[200px] flex justify-center items-center  bg-gray-900 text-white px-6 py-3 rounded-md font-semibold hover:bg-gray-800 transition-colors"
             >
               Contact
             </Link>
@@ -28,7 +29,7 @@ export default function Hero() {
             <div className="flex justify-center items-center">
               <div className="w-56 h-56 ">
                 <Image
-                  src="/assets/Rulo_Profile.png" // Replace with the correct image path
+                  src={Profile} // Replace with the correct image path
                   alt="Profile Picture"
                   width={250}
                   height={250}

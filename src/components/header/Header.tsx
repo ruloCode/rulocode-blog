@@ -4,32 +4,22 @@ import {
   DrawerContent,
   DrawerDescription,
   DrawerFooter,
+  DrawerClose,
   DrawerHeader,
   DrawerTrigger,
 } from "@/components/ui/drawer";
-import { useState, useEffect } from "react";
 import NavBar from "./NavBar";
 import Logo from "./Logo";
 import MaxWidthWrapper from "../maxWidthWrapper/MaxWidthWrapper";
+import Link from "next/link";
 
 const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsMenuOpen((prevState) => !prevState);
-  };
-
-  useEffect(() => {
-    if (isMenuOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "unset";
-    }
-
-    return () => {
-      document.body.style.overflow = "unset";
-    };
-  }, [isMenuOpen]);
+  const navLinks = [
+    { name: "Home", href: "/" },
+    { name: "Portfolio", href: "/portfolio" },
+    { name: "Blog", href: "/blog" },
+    { name: "Contact", href: "/contact" },
+  ];
 
   return (
     <header className="sticky top-0 bg-white shadow-md z-50 h-[78px] flex items-center w-full">
@@ -42,10 +32,8 @@ const Header = () => {
           </nav>
           <Drawer>
             <DrawerTrigger>
-              {" "}
               <button
                 className="block lg:hidden focus:outline-none"
-                onClick={toggleMenu}
                 aria-label="Toggle menu"
               >
                 <svg
@@ -66,18 +54,22 @@ const Header = () => {
             </DrawerTrigger>
             <DrawerContent>
               <DrawerHeader>
-                <DrawerDescription>
-                  <NavBar isMobile />
+                <DrawerDescription className="flex flex-col gap-2">
+                  {navLinks.map((link) => (
+                    <DrawerClose asChild key={link.href}>
+                      <Link
+                        href={link.href}
+                        className="text-gray-700 font-bold"
+                      >
+                        {link.name}
+                      </Link>
+                    </DrawerClose>
+                  ))}
                 </DrawerDescription>
               </DrawerHeader>
-              <DrawerFooter>
-              </DrawerFooter>
+              <DrawerFooter></DrawerFooter>
             </DrawerContent>
           </Drawer>
-          {/* Mobile Menu Button */}
-
-    
-
         </div>
       </MaxWidthWrapper>
     </header>

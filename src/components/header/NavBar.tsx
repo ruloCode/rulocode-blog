@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { DrawerClose, Drawer } from "@/components/ui/drawer";
+import {  Drawer } from "@/components/ui/drawer";
 type NavBarProps = {
   isMobile?: boolean;
 };
@@ -19,11 +19,9 @@ const NavBar: React.FC<NavBarProps> = ({ isMobile }) => {
         >
           {links.map((link) => (
             <li key={link.id} className={`${isMobile ? "mb-2" : "ml-4"}`}>
-              <DrawerClose>
                 <Link href={link.to} className="text-gray-700 font-bold">
                   {link.name}
                 </Link>
-              </DrawerClose>
             </li>
           ))}
         </ul>
